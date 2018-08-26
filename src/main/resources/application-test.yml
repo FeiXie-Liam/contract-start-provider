@@ -6,5 +6,4 @@ spring:
   jpa:
     show-sql: true
     database: mysql
-server:
-  port: 8090
+
