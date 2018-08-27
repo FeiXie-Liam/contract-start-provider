@@ -1,6 +1,6 @@
-package com.thoughtworks.contract.repository;
+package com.thoughtworks.contract.provider.repository;
 
-import com.thoughtworks.contract.entity.Product;
+import com.thoughtworks.contract.provider.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

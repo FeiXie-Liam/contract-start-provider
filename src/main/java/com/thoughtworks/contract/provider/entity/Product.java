@@ -1,4 +1,4 @@
-package com.thoughtworks.contract.entity;
+package com.thoughtworks.contract.provider.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
