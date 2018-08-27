@@ -1,4 +1,4 @@
-package com.thoughtworks.contract;
+package com.thoughtworks.contract.provider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

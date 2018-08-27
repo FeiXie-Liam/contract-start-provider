@@ -1,7 +1,7 @@
-package com.thoughtworks.contract.service;
+package com.thoughtworks.contract.provider.service;
 
-import com.thoughtworks.contract.entity.Product;
-import com.thoughtworks.contract.repository.ProductRepository;
+import com.thoughtworks.contract.provider.entity.Product;
+import com.thoughtworks.contract.provider.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,5 +18,10 @@ public class ProductService {
 
     public List<Product> getAll() {
         return productRepository.findAll();
+    }
+
+    public Long add(Product product) {
+        Product savedProduct = productRepository.save(product);
+        return savedProduct.getId();
     }
 }
