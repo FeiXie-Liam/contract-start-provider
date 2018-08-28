@@ -21,12 +21,9 @@ public class GoodsController {
         this.goodsService = goodsService;
     }
 
-    @PostMapping(value = "/{id}")
-    public ResponseEntity add(@RequestBody Goods goods, @PathVariable Long id) {
+    @PostMapping
+    public ResponseEntity add(@RequestBody Goods goods) {
         Long goodsId = goodsService.add(goods);
-//        return ResponseEntity.created(URI.create("/goods/" + goodsId)).build();
-        Map map = new HashMap();
-        map.put("id", goodsId);
-        return new ResponseEntity(map, HttpStatus.CREATED);
+        return ResponseEntity.created(URI.create("/goods/" + goodsId)).build();
     }
 }
