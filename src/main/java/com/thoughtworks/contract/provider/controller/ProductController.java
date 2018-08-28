@@ -3,14 +3,13 @@ package com.thoughtworks.contract.provider.controller;
 import com.thoughtworks.contract.provider.entity.Product;
 import com.thoughtworks.contract.provider.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/products")
@@ -30,6 +29,6 @@ public class ProductController {
     @PostMapping
     public ResponseEntity add(@RequestBody Product product) {
         Long productId = productService.add(product);
-        return ResponseEntity.created(URI.create("/products/"+productId)).build();
+        return ResponseEntity.created(URI.create("/products/" + productId)).build();
     }
 }

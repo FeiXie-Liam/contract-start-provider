@@ -9,9 +9,24 @@ Contract.make {
             contentType(applicationJson())
         }
         body(file("request.json"))
-        url("/goods")
+//        url("/goods")
+
+//        url(value(regex("/goods/[0-9]+")))
+        url(value(consumer(regex("/goods/[0-9]+")),
+                producer("/goods/2")))
     }
     response {
         status(201)
+//        body("""
+//            {
+//                "id":"${regex("[0-9]+")}"
+//            }
+//        """)
+        body("""
+            {"id":"${value(regex("[0-9]+"))}"}
+        """)
+//        headers {
+//            header('Content-Type': 'application/json;charset=UTF-8')
+//        }
     }
 }

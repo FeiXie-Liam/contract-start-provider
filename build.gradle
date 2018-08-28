@@ -51,6 +51,7 @@ dependencies {
     compile('org.projectlombok:lombok')
     runtime('mysql:mysql-connector-java')
     testCompile('org.codehaus.groovy:groovy-all:2.4.6')
+    testCompile('org.projectlombok:lombok')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('org.springframework.cloud:spring-cloud-starter-contract-verifier')
     testCompile('com.github.database-rider:rider-spring:1.2.9') {
